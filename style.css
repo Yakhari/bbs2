@@ -1,25 +1,25 @@
 body{
-	background-color:#7fbf7e;
+	background-color:#01570d;
 }
 .container {
     display: grid;
     grid-template-columns: 1fr .25fr 1.5fr 0.25fr 1fr;
-    grid-template-rows: 0.15fr 0.15fr 1fr 0.1fr;
+    grid-template-rows: 0.15fr 0.10fr 1fr 0.1fr;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
       ". title title title ."
-      "navbar navbar navbar navbar navbar"
+      ". navbar navbar navbar ."
       "article-1 article-1 bulbsaur-image article-2 article-2"
       "footer footer footer footer footer";
   }
   
 .title { 
     grid-area: title; 
-    background-color:#82de94;
+    background-color:#008521;
 	border:3px solid #000000;
 	text-align:center;
-	font-family: 'Caveat', cursive;
+	font-family: 'Indie Flower', cursive;
 	font-size:2.5em;
 
 }
@@ -30,12 +30,12 @@ body{
 	font:arial;
 	font-size:3em;
 	font-family: 'Roboto Condensed', sans-serif;
-    background-color:#82de94;
+    background-color:#008521;
 }
 
 .navbar a {
     float: left;
-    color: #f2f2f2;
+    color: #000000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -43,27 +43,63 @@ body{
 }
 
 .navbar a:hover {
-    background-color: #a7e7d1;
+    background-color: #00ad2b;
     color: black;
   }
 .navbar a.active {
-    background-color: #87d3b5;
-    color: white;
+    background-color: #03be32;
+    color: #000000;
 }
   
 .article-1 { 
-    grid-area: article-1; 
+    grid-area: article-1;
+    background-color:#008521;
+	border:3px solid #000000;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
   
 .article-2 { 
-    grid-area: article-2; 
+    grid-area: article-2;
+    background-color:#008521;
+	border:3px solid #000000;
+    text-align: center;
+    font-family: 'Raleway', sans-serif; 
+    padding-left: 5px;
+    padding-right: 5px;
+    
 }
   
 .bulbsaur-image { 
-    grid-area: bulbsaur-image; 
+    grid-area: bulbsaur-image;
+    width: 500px;
+    height: 500px;
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+    background-color: #008521;
+    border: 3px solid #000000;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+
 }
+img:hover {
+    animation:spin 2s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
   
 .footer { 
-    grid-area: footer; 
+    grid-area: footer;
+    background-color:#008521;
+	width:100%;
+	border:3px solid #000000;
+	text-align:center;
+	font-family: 'Raleway', sans-serif;
+	font-size:1em; 
+
 }
   
