@@ -87,9 +87,9 @@ body{
 
 }
 img:hover {
-    animation:spin 2s linear infinite;
+    animation:spin 200s ease-in infinite;
 }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360000deg); transform:rotate(360000deg); } }
 
   
 .footer { 
