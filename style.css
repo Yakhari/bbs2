@@ -4,7 +4,7 @@ body{
 .container {
     display: grid;
     grid-template-columns: 1fr .25fr 1.5fr 0.25fr 1fr;
-    grid-template-rows: 0.15fr 0.10fr 1fr 0.1fr;
+    grid-template-rows: 0.15fr 0.05fr 1fr 0.1fr;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -27,19 +27,19 @@ body{
 .navbar { 
     grid-area: navbar; 
     border:3px solid #000000;
-	font:arial;
-	font-size:3em;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:'Raleway', sans-serif;
     background-color:#008521;
 }
 
 .navbar a {
-    float: left;
-    color: #000000;
+    display: inline;
+    background-color: #008521;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    float: left;
+    overflow: hidden;
+    
 }
 
 .navbar a:hover {
@@ -87,10 +87,26 @@ body{
 
 }
 img:hover {
-    animation:spin 200s ease-in infinite;
+    animation:spin 200s ease-in infinite, rainbow 4s steps(36) infinite;
 }
 @keyframes spin { 100% { -webkit-transform: rotate(360000deg); transform:rotate(360000deg); } }
 
+@-webkit-keyframes rainbow {
+    from { -webkit-filter:hue-rotate(0deg); }
+      to { -webkit-filter:hue-rotate(360deg); }
+}
+
+@keyframes rainbow {
+    from {
+       -webkit-filter:hue-rotate(0deg);
+               filter:hue-rotate(0deg);
+       }
+     to {
+       -webkit-filter:hue-rotate(360deg);
+               filter:hue-rotate(360deg);
+       }
+   }
+   
   
 .footer { 
     grid-area: footer;
