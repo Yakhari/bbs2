@@ -29,6 +29,7 @@ body{
     border:3px solid #000000;
 	font-family:'Raleway', sans-serif;
     background-color:#008521;
+    font-size: 2em;
 }
 
 .navbar a {
@@ -41,6 +42,13 @@ body{
     overflow: hidden;
     
 }
+.navbar a:link {
+    color: black;
+}
+.navbar a:visited {
+    color: black;
+}
+
 
 .navbar a:hover {
     background-color: #00ad2b;
